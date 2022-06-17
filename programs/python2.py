@@ -32,7 +32,14 @@ import random
 
 
 def one(string):
-    return
+    newStr = ''
+    for char in string:
+        #print(char)
+        #newStr.append(char)
+        newStr = newStr + (char * 3)
+    return newStr
+
+print(one('the'))
 
     # <QUESTION 2>
 
