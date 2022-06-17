@@ -1,4 +1,4 @@
-import random
+import random, math
 
 # INSTRUCTIONS
 
@@ -39,7 +39,7 @@ def one(string):
         newStr = newStr + (char * 3)
     return newStr
 
-print(one('the'))
+#print(one('the'))
 
     # <QUESTION 2>
 
@@ -58,7 +58,22 @@ print(one('the'))
 
 
 def two(num):
-    return
+    oneless = num - 1
+    if num == 3 or num == 2:
+        return True 
+
+    else:
+
+        for i in range(2, oneless):
+            if num % i == 0:
+                #break
+                print(i)
+                return False
+            else:
+                print(i)
+                return True
+
+#print(two(2))
 
     # <QUESTION 3>
 
@@ -76,7 +91,15 @@ def two(num):
 
 
 def three(a):
-    return
+
+    newaa = str(a) * 2
+    newaaa = str(a) * 3
+    newaaaa = str(a) * 4
+    
+    total = a + int(newaa) + int(newaaa) + int(newaaaa)
+    return total
+
+#print(three(3))
 
     # <QUESTION 4>
 
@@ -106,7 +129,23 @@ def three(a):
 
 
 def four(string1, string2):
-    return
+    newStr = []
+    str1 = list(string1)
+    str2 = list(string2)
+    
+    
+    for j in str1:
+        for a in str2:
+            print(j)
+            
+            print(a)
+        #newStr.insert(1, str[i])
+        #newStr.append(str[i])
+    #new1 = str1.split(', ')
+    #print(new1)
+    return newStr
+
+print(four("String","Fridge"))
 
     # <QUESTION 5>
 
@@ -124,7 +163,18 @@ def four(string1, string2):
 
 
 def five():
-    return
+    bag = []
+
+
+    while len(bag) != 5:
+        num = random.randint(100, 200)
+        if num % 2 == 0:
+            bag.append(num)
+        else:
+            continue
+    return bag
+
+print(five())
 
     # <QUESTION 6>
 
@@ -144,7 +194,13 @@ def five():
 
 
 def six(string):
-    return
+    newStr = string.lower()
+    if newStr.endswith("py"):
+        return True
+    else:
+        return False
+
+print(six("pyiscoolPY"))
 
     # <QUESTION 7>
 
@@ -169,7 +225,20 @@ def six(string):
 
 
 def seven(a, b, c):
-    return
+    arr = [a, b, c]
+    sortedarr = sorted(arr)
+    #print(sortedarr)
+
+    check1 = sortedarr[0] - sortedarr[1]
+    check2 = sortedarr[1] - sortedarr[2]
+
+    if check1 == check2:
+        return True
+    else:
+        return False
+    
+
+print(seven(2, 6, 4))
 
     # <QUESTION 8>
 
@@ -187,8 +256,25 @@ def seven(a, b, c):
     # Use the cli to access the documentation help(str.replace)
 
 
-def eight(string, num):
+'''def eight(string, num):
+
+    strlen = len(string)
+
+    pos = strlen / 2
+
+    newpos = math.floor(pos)
+
+    for i in range(num):
+        string.replace()
+
+
+    if num > 1:
+        width = math.floor(num / 2)
+        corpos = newpos - width
+    print(newpos)
     return
+
+print(eight("Hello", 3))'''
 
     # <QUESTION 9>
 
@@ -205,9 +291,18 @@ def eight(string, num):
     # There are no hints for this question.
 
 
-def nine(string1, string2):
+'''def nine(string1, string2):
+
+    if len(string1) == len(string2):
+        for i in string1:
+            if i in string2:
+                continue
+            else:
+                return False
+        return True'''
+
     # make sure string1 is the shortest of the two
-    return
+    
 
     # <QUESTION 10>
 
